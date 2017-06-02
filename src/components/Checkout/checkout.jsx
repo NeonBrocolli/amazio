@@ -13,33 +13,31 @@ const Checkout = () => {
             <th>Quantity</th>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>ITEM1</td>
+            <td>$5</td>
+            <td>10</td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>ITEM2</td>
+            <td>$44</td>
+            <td>1</td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>Item3</td>
+            <td>$2</td>
+            <td>5</td>
           </tr>
         </tbody>
       </table>
       </div>
         <div className='col-sm-5'>
           <header className="text-center">Order Summary</header>
-          <tr>
-            <td>Subtotal</td>
-            <td>Tax</td>
-          </tr>
-          <tr>
-            <td>Total</td>
-          </tr>
-          <button>Checkout</button>
+          <ul>
+            <li>Subtotal</li>
+            <li>Tax</li>
+            <li>Total</li>
+          </ul>
+          <button className="btn btn-default">Checkout</button>
         </div>
     </div>
   )

@@ -21,7 +21,7 @@ class App extends Component {
     return (
       <div>
         <Nav />
-        <div className="container">
+        <div className="container App-container">
           <Switch>
             <Route exact path="/" component={Catalogue} />
             <Route path="/checkout" component={Checkout} />
