@@ -16,8 +16,10 @@ const Checkout = (props) => {
         <tbody>
           {props.checkoutItems.map(e => {
             return (
+            <div>
             <td>{e.name}</td>
             <td>{e.price}</td>
+            </div>
             )
           })
         }
