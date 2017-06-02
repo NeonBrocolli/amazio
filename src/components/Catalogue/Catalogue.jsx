@@ -15,34 +15,34 @@ const Catalogue = (props) => {
           </thead>
           <tbody>
             <tr>
-              <td>1</td>
-              <td>2</td>
-              <td>3</td>
-              <td>4</td>
+              <td>Item Name 1</td>
+              <td>Price 1</td>
+              <td>Description 1</td>
+              <td>SKU 1</td>
+              <td>
+                  <a href="">Add</a>&nbsp;&nbsp;|&nbsp;&nbsp; 
+                  <a href="">Delete</a>
+              </td>
             </tr>
             <tr>
-              <td>1</td>
-              <td>2</td>
-              <td>3</td>
-              <td>4</td>
+              <td>Item Name 2</td>
+              <td>Price 2</td>
+              <td>Description 2</td>
+              <td>SKU 2</td>
+              <td>
+                  <a href="">Add</a>&nbsp;&nbsp;|&nbsp;&nbsp; 
+                  <a href="">Delete</a>
+              </td>
             </tr>
             <tr>
-              <td>1</td>
-              <td>2</td>
-              <td>3</td>
-              <td>4</td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>2</td>
-              <td>3</td>
-              <td>4</td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>2</td>
-              <td>3</td>
-              <td>4</td>
+              <td>Item Name 3</td>
+              <td>Price 3</td>
+              <td>Description 3</td>
+              <td>SKU 3</td>
+              <td>
+                  <a href="">Add</a>&nbsp;&nbsp;|&nbsp;&nbsp; 
+                  <a href="">Delete</a>
+              </td>
             </tr>
           </tbody>
         </table>
