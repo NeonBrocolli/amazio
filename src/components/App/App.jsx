@@ -10,11 +10,29 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      item: {name: '',
-      price: null,
-      description: '',
-      SKU: null}
-    }
+      items: [
+      {
+      name: 'Blep',
+      price: 5,
+      description: 'It sucks',
+      SKU: 1231
+      },
+      {
+      name: 'Blepo',
+      price: 2,
+      description: 'Fsho',
+      SKU: 1122
+      },
+      {
+      name: 'Hanzo',
+      price: 10,
+      description: 'main',
+      SKU: 3333
+      }]}
+  }
+
+  checkoutItems = () ={
+    return this.state.items;
   }
 
   render() {
@@ -23,8 +41,12 @@ class App extends Component {
         <Nav />
         <div className="container App-container">
           <Switch>
-            <Route exact path="/" component={Catalogue} />
-            <Route path="/checkout" component={Checkout} />
+            <Route exact path="/" render={() =>
+              <Catalogue item={this.state.item} />
+            } />
+            <Route path="/checkout" render={
+              <Checkout item={this.state.item} checkoutItems={this.state.items} />
+            } />
             <Route path="/order" componen={Order} />
           </Switch>
         </div>
