@@ -46,7 +46,7 @@ class App extends Component {
 				<Nav />
         <div className="container App-container">
           <Switch>
-            <Route exact path="/" render={() => 
+            <Route exact path="/" render={() =>
 							<Catalogue handleSearchChange={this.handleSearchChange} filterItems={this.filterItems()} />
 						} />
             <Route path="/checkout" component={Checkout} />
