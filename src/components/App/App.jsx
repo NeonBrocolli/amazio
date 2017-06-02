@@ -10,11 +10,34 @@ class App extends Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			item: {name: '',
-			price: null,
-			description: '',
-			SKU: null}
+			items: [{
+				name: 'Chocopie',
+				price: 1.50,
+				description: 'Korean chocolate snack',
+				SKU: 123123
+			},
+			{
+				name: 'Cap',
+				price: 2.50,
+				description: "Christian's cap",
+				SKU: 111111
+			},
+			{
+				name: 'Underwear',
+				price: .50,
+				description: "Justin's underwear",
+				SKU: 222222
+			}],
+			search: ""
 		}
+	}
+
+	filterItems = () => {
+		return this.state.items.filter(i => i.name.toLowerCase().includes(this.state.search));
+	}
+
+	handleSearchChange = (value) => {
+		this.setState({search: value.toLowerCase()});
 	}
 
 	render() {
@@ -23,7 +46,9 @@ class App extends Component {
 				<Nav />
         <div className="container App-container">
           <Switch>
-            <Route exact path="/" component={Catalogue} />
+            <Route exact path="/" render={() => 
+							<Catalogue handleSearchChange={this.handleSearchChange} filterItems={this.filterItems()} />
+						} />
             <Route path="/checkout" component={Checkout} />
             <Route path="/order" componen={Order} />
           </Switch>
